@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operacion</title>
+</head>
+<body>
+    <script>
+        operacion=prompt("Ingrese la operacion que desea realizar")
+    primerNumero=prompt("Ingrese el primer número")
+    segundoNumero=prompt("Ingrese el segundo número")
+    if(operacion=="suma"){
+        suma=parseInt(primerNumero) + parseInt(segundoNumero)
+        document.write("la suma es ")
+        document.write(suma)
+        alert("la suma es "+primerNumero+ " con "+ segundoNumero + "es " + suma)
+    }
+    else if(operacion=="resta"){
+        resta=parseInt(primerNumero) - parseInt(segundoNumero)
+        document.write("la resta es ")
+        document.write(resta)
+        alert("la resta es "+primerNumero+ " con "+ segundoNumero + "es " + resta)
+    }
+    else if(operacion=="multiplicacion"){
+        multiplicacion=parseInt(primerNumero) * parseInt(segundoNumero)
+        document.write("la multiplicacion es ")
+        document.write(multiplicacion)
+        alert("la multiplicacion es "+primerNumero+ " con "+ segundoNumero + "es " + multiplicacion)
+    }
+    else if(operacion=="division"){
+        division=parseInt(primerNumero) / parseInt(segundoNumero)
+        document.write("la division es ")
+        document.write(division)
+        alert("la division es "+primerNumero+ " con "+ segundoNumero + "es " + division)
+    }
+    else{
+        alert("No es una operacion valida")
+    }
+    </script>
+</body>
+</html>
