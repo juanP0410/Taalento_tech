@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <label for="">Nombre:</label>
+        <input type="text" id="txtnombre"><br>
+        <label for="">Edad:</label>
+        <input type="text" id="txtedad"><br>
+        <label for="estatura">Estatura:</label>
+        <input type="text" id="txtestatura"><br>
+        <label for="sexo">Sexo:</label>
+       <input type="text" id="txtsexo"> <br>
+       <button type="button" onclick="enviar()">Enviar</button>
+    </form>
+    <script>
+        function enviar() {
+             nomdreAspirante = document.getElementById("txtnombre").value
+             edadAspirante = document.getElementById("txtedad").value
+             estatura = document.getElementById("txtestatura").value
+             sexo = document.getElementById("txtsexo").value
+             if ((edadAspirante >= 18) && (estatura >= 1.70) && (sexo == "masculino"))
+             {
+                alert("Bienvenido"+ nomdreAspirante+" a la escuela de futbol!!")
+             }else {
+                if ((edadAspirante >= 18) && (estatura >= 1.60) && (sexo == "femenino")){
+                    alert("Bienvenida"+ nomdreAspirante+" a la escuela de futbol!!")
+                }else{
+                    alert("Lo sentimos no cumples con los requisitos para ingresar a la escuela de futbol")
+                }
+            }
+        }
+    </script>
+</body>
+</html>
