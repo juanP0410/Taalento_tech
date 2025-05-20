@@ -1,0 +1,48 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        inventario = []
+        
+        function save() {
+            producto = {}
+            producto.codigo = document.getElementById("txtcodigo").value
+            producto.nombre = document.getElementById("txtnombre").value
+            producto.stock = document.getElementById("txtstock").value
+            producto.valor = document.getElementById("txtvalor").value
+            inventario.push(producto)
+            alert("Guardado con exito")
+            document.getElementById("txtcodigo").value = ""
+            document.getElementById("txtnombre").value = ""
+            document.getElementById("txtstock").value = ""
+            document.getElementById("txtvalor").value = ""
+        }
+    </script>
+    <script>
+        function consultar() {
+            document.getElementById("txtcodigo").value = producto.codigo 
+            document.getElementById("txtnombre").value = producto.nombre
+            document.getElementById("txtstock").value = producto.stock
+            document.getElementById("txtvalor").value = producto.valor
+        }
+    </script>
+ </head>
+ <body>
+    <h1>Mi frutera</h1>
+    <form action="">
+        <label for="">codigo</label>
+        <input type="text" id="txtcodigo"><br>
+        <label for="">nombre</label>
+        <input type="text" id="txtnombre"><br>
+        <label for="">stock</label>
+        <input type="text" id="txtstock"><br>
+        <label for="">valor</label>
+        <input type="text" id="txtvalor"><br>
+        <button type="button"onclick="save()">Guardar</button>
+        <button type="button" onclick=" consultar()">Consultar</button>
+    </form>
+ </body>
+ </html>
